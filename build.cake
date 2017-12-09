@@ -1,3 +1,5 @@
+#tool nuget:?package=NUnit.ConsoleRunner
+
 Task("Build")
 .Does(() => {
     var settings = new MSBuildSettings()
