@@ -1,4 +1,4 @@
-Task("Default")
+Task("Build")
 .Does(() => {
     var settings = new MSBuildSettings()
     {
@@ -7,5 +7,8 @@ Task("Default")
 
     MSBuild("CakeDemo.sln", settings);
 });
+
+Task("Default")
+    .IsDependentOn("Build");
 
 RunTarget("Default");
