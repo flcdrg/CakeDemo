@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace CakeDemo
+namespace CakeDemoTests
 {
     [TestFixture]
     public class UnitTests
