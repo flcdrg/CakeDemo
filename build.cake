@@ -2,6 +2,8 @@
 
 #r "C:\dev\git\CakeDemo\CakeDemoAddin\bin\Debug\CakeDemoAddin.dll"
 
+var configuration = Argument("configuration", "Debug");
+
 Task("Build")
 .Does(() => {
     var settings = new MSBuildSettings()
@@ -14,7 +16,7 @@ Task("Build")
 
 Task("Tests")
 .Does(() => {
-    NUnit3(@"**/bin/*/*Tests.dll");
+    NUnit3(@"**/bin/" + configuration + @"/*Tests.dll");
 });
 
 Task("Logging")
